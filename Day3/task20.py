@@ -1,0 +1,1 @@
+#Stop checking servers once a database server is found.

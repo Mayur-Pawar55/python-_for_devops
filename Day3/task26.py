@@ -1,0 +1,1 @@
+#Loop through filenames and print only .log files.

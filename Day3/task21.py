@@ -1,0 +1,1 @@
+#Skip stopped servers while looping through server list.

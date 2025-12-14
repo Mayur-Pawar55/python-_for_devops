@@ -1,0 +1,1 @@
+#Calculate square of a number and reuse the value.
