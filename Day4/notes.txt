@@ -1,0 +1,142 @@
+Day 4 – File Handling & Log Monitoring (DevOps Notes)
+1. Why File Handling is Important in DevOps
+
+DevOps engineers work with files every day:
+
+* Application logs
+* System logs
+* Config files
+* Reports
+* Backup files
+
+Python helps you:
+
+* Read logs
+* Write reports
+* Scan errors
+* Automate monitoring
+
+2. Opening a File
+
+Use `open()` function.
+
+file = open("app.log", "r")
+
+Modes:
+
+"r" → read
+"w" → write (overwrite)
+"a" → append
+"r+" → read + write
+
+3. Reading a File
+
+🔹 Read full file
+
+file = open("app.log", "r")
+content = file.read()
+print(content)
+file.close()
+
+🔹 Read line by line (BEST for logs)
+
+file = open("app.log", "r")
+
+for line in file:
+    print(line)
+
+file.close()
+
+✔ Best for large log files
+
+4. Writing to a File
+
+file = open("report.txt", "w")
+file.write("Server is healthy\n")
+file.close()
+
+"w" will delete old content
+
+5. Append to a File
+
+Used for logs and reports.
+
+file = open("report.txt", "a")
+file.write("New log entry\n")
+file.close()
+
+6. Using `with` Statement (Recommended)**
+
+Automatically closes file.
+
+with open("app.log", "r") as file:
+    for line in file:
+        print(line)
+
+✔ Cleaner
+✔ Safer
+✔ Professional style
+
+7. Log Monitoring Example
+
+with open("app.log", "r") as file:
+    for line in file:
+        if "ERROR" in line:
+            print("Error found:", line)
+
+✔ Real production use case
+✔ Interview-friendly
+
+8. Counting Errors in Log File**
+
+count = 0
+
+with open("app.log", "r") as file:
+    for line in file:
+        if "ERROR" in line:
+            count += 1
+
+print("Total errors:", count)
+
+9. Writing Error Report
+
+with open("error_report.txt", "a") as file:
+    file.write("ERROR found in application\n")
+
+10. Check File Exists**
+
+Very common DevOps task.
+
+import os
+
+if os.path.exists("app.log"):
+    print("Log file exists")
+else:
+    print("Log file not found")
+
+11. Read File Safely (Try / Except)
+
+try:
+    with open("app.log", "r") as file:
+        print(file.read())
+except FileNotFoundError:
+    print("File not found")
+
+✔ Prevents script crash
+✔ Production-ready
+
+12. DevOps Use Cases
+
+* Monitor logs for errors
+* Generate reports
+* Audit server activity
+* Validate config files
+* Alerting systems
+
+🧠 Day 4 Summary
+
+* Learned file read/write
+* Learned safe file handling
+* Learned log monitoring
+* Learned error counting
+* Used Python like real DevOps engineers

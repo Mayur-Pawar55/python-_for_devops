@@ -1,0 +1,111 @@
+Day 1 – Python Basics (DevOps Notes)
+
+1. What is Python (for DevOps)
+
+Python is a scripting language.
+DevOps engineers use Python to automate tasks, not to build big apps.
+Used for:
+
+  * Server automation
+  * AWS automation
+  * CI/CD scripts
+  * Log monitoring
+  * Repetitive tasks
+
+
+2. Running a Python Program
+
+* Python files end with ".py"
+* Run using:
+
+    python3 file_name.py
+  * Example:
+
+  print("Hello DevOps")
+  
+
+3. Variables
+
+* Variables store data.
+* No data type needed to declare.
+
+Like
+name = "Mayur"
+age = 27
+
+4. Data Types (Very Important)
+
+🔹 String
+
+tool = "Docker"
+
+🔹 Integer
+
+count = 5
+
+🔹 Float
+
+cpu_usage = 75.5
+
+🔹 Boolean
+
+is_running = True
+
+5. List
+
+* Used to store multiple values.
+* Ordered and changeable.
+
+tools = ["AWS", "Docker", "Jenkins"]
+
+Used in DevOps for:
+
+* Servers list
+* Tools list
+* Instances list
+
+6. Dictionary
+
+* Stores data in "key : value" format.
+* Very common in DevOps (JSON, YAML).
+
+server = {
+    "name": "web1",
+    "status": "running"
+}
+
+7. Print Statement
+
+Used to show output.
+
+print(name)
+print("Hello DevOps")
+
+
+8. f-string (Important)
+
+Used to print variables inside text.
+
+print(f"My name is {name}")
+
+9. User Input
+
+* Takes input from user.
+* Input is always **string**, convert if needed.
+
+age = int(input("Enter age: "))
+
+10. Basic DevOps Example
+
+server = "db1"
+print(f"Checking server {server}")
+Day 1 Summary
+
+ Python basics learned:
+
+  * Variables
+  * Data types
+  * Lists
+  * Dictionaries
+  * Print & input
+

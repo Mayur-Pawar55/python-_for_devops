@@ -1,0 +1,147 @@
+
+Day 2 – Conditions & Loops (DevOps Notes)**
+
+1. IF / ELSE (Decision Making)
+
+Used when we want to check a condition and decide.
+
+Syntax:
+
+if condition:
+    # do something
+else:
+    # do something else
+
+Example:
+
+status = "running"
+
+if status == "running":
+    print("Server is healthy")
+else:
+    print("Server is down")
+
+DevOps usage:
+
+* Check server status
+* Check file exists
+* Check disk usage
+* Validate user access
+
+2. ELIF (Multiple Conditions)
+
+tool = "Docker"
+
+if tool == "Docker":
+    print("Container tool")
+elif tool == "Terraform":
+    print("IaC tool")
+else:
+    print("Unknown tool")
+
+3. FOR Loop
+
+Used when:
+
+* You have a list
+* You know how many times to loop
+
+ Syntax:
+
+for item in list:
+    print(item)
+
+ Example:
+
+servers = ["web1", "db1", "cache"]
+
+for s in servers:
+    print(f"Checking {s}")
+
+
+DevOps usage:
+
+* Loop through servers
+* Loop through logs
+* Loop through AWS resources
+
+4. WHILE Loop
+
+Used when:
+
+* we don’t know how many times to repeat
+* we wait until a condition changes
+
+Syntax:
+
+while condition:
+    # keep running
+
+ Example:
+
+
+status = "starting"
+
+while status != "running":
+    print("Waiting for server...")
+    status = "running"
+
+ DevOps usage:
+
+* Retry logic
+* Waiting for pod/server
+* Polling status
+
+5. BREAK
+
+Stops the loop completely.
+
+for s in servers:
+    if s == "db1":
+        break
+
+Used when:
+
+* want to stop early
+
+6. CONTINUE
+
+Skips current iteration and moves to next.
+
+for s in servers:
+    if s == "cache":
+        continue
+    print(s)
+
+Used when:
+
+we want to ignore certain items
+
+7. Using IF Inside Loops
+
+Very common in DevOps.
+
+for s in servers:
+    if s.startswith("db"):
+        print("Database server")
+
+8. Range Function
+
+Used to generate numbers.
+
+for i in range(1, 6):
+    print(i)
+
+9. Common Mistakes to Avoid
+
+* Printing list instead of loop variable
+* Using `len(variable)` instead of counter
+* Using `range` as a variable name
+* Wrong indentation (very important!)
+
+🧠 Day 2 Summary
+
+* Learned decision making with `if / else`
+* Learned repetition with `for` and `while`
+* Learned control using `break` and `continue`
+* Applied logic to real DevOps scenarios

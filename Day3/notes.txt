@@ -1,0 +1,150 @@
+📘 Day 3 – Functions (DevOps Notes)
+✅ 1. What is a Function
+
+A function is a block of code that does a specific task.
+
+Write once, use many times.
+
+Makes scripts clean, reusable, and readable.
+
+✅ 2. Why Functions are Important in DevOps
+
+Functions help to:
+
+Avoid duplicate code
+
+Automate repeated tasks
+
+Organize scripts
+
+Build reusable DevOps utilities
+
+Examples:
+
+Server checks
+
+Log scanning
+
+Retry logic
+
+AWS resource checks
+
+✅ 3. Function Syntax
+def function_name():
+    # code
+
+
+Call the function:
+
+function_name()
+
+✅ 4. Function Without Arguments
+def greet():
+    print("Hello DevOps")
+
+greet()
+
+
+Used when:
+
+Task does not need input
+
+✅ 5. Function With Arguments
+def greet(name):
+    print(f"Hello {name}")
+
+greet("Mayur")
+
+
+Used when:
+
+Task needs dynamic input
+
+✅ 6. Function With Return Value
+def square(num):
+    return num * num
+
+result = square(5)
+print(result)
+
+
+Why return is important:
+
+Value can be reused
+
+Needed in automation logic
+
+Used in conditions & calculations
+
+✅ 7. Function + IF / ELSE
+def check_server(server):
+    if server.startswith("db"):
+        print("Database Server")
+    else:
+        print("Application Server")
+
+
+Used for:
+
+Server classification
+
+Tool validation
+
+✅ 8. Function + Loop
+
+Very common DevOps pattern.
+
+servers = ["web1", "db1", "cache"]
+
+for s in servers:
+    check_server(s)
+
+✅ 9. Function + WHILE Loop (Retry Logic)
+def retry_connection():
+    tries = 1
+    while tries <= 3:
+        print(f"Trying... {tries}")
+        tries += 1
+    print("Connected!")
+
+
+Used for:
+
+API retries
+
+Server health checks
+
+Pod readiness checks
+
+✅ 10. Returning Boolean (True / False)
+def is_db_server(server):
+    return server.startswith("db")
+
+
+Used in:
+
+Filters
+
+Counters
+
+Conditions
+
+✅ 11. Best Practices (Important)
+
+Use meaningful function names
+
+Avoid using built-in names (list, range, name)
+
+Prefer return over print
+
+Keep one task per function
+
+🧠 Day 3 Summary
+
+Learned how to create functions
+
+Used arguments and return values
+
+Combined functions with loops & conditions
+
+Built real DevOps-style logic
